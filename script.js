@@ -38,8 +38,8 @@ var finishIcon = L.icon({
 });
 var p15Icon = L.icon({
   iconUrl: 'p15.png',
-  iconSize:     [128, 32], // size of the icon
-  iconAnchor:   [64, 16], // point of the icon which will correspond to marker's location
+  iconSize:     [96, 24], // size of the icon
+  iconAnchor:   [48, 12], // point of the icon which will correspond to marker's location
 });
 
 var solarLat = 39.0377;
