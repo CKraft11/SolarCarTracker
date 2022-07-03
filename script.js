@@ -51,7 +51,7 @@ L.marker([solarLat, solarLong], {icon: p15Icon}).addTo(map);
 //solarcar.addTo(map);
 // adding geojson by fetch
 // of course you can use jquery, axios etc.
-fetch("/asc.geojson")
+fetch("asc.geojson")
   .then(function (response) {
     return response.json();
   })
