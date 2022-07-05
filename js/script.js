@@ -32,18 +32,18 @@ var solarDetails = {
   clickable: true
 }
 var finishIcon = L.icon({
-  iconUrl: 'finish_line.png',
+  iconUrl: '/images/finish_line.png',
   iconSize:     [64, 64], // size of the icon
   iconAnchor:   [22, 64], // point of the icon which will correspond to marker's location
 });
 var p15Icon = L.icon({
-  iconUrl: 'p15.png',
+  iconUrl: '/images/p15.png',
   iconSize:     [96, 24], // size of the icon
   iconAnchor:   [48, 12], // point of the icon which will correspond to marker's location
 });
 
-var solarLat = 39.0377;
-var solarLong = -95.6761;
+var solarLat = 38.927330017089844;
+var solarLong = -95.67621612548828;
 L.marker([42.5839, -114.4710], {icon: finishIcon}).addTo(map);
 //var finishline = new L.Marker([42.5839, -114.4710]);
 L.marker([solarLat, solarLong], {icon: p15Icon}).addTo(map);
