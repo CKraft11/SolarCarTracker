@@ -30,7 +30,7 @@ socket.onmessage = function (event) {
     speed = speed[1]/10;
     console.log(speed);
     const div = document.getElementById('speed');
-    div.innerHTML = speed + " MPH";
+    div.innerHTML = speed + " Mph";
 
   }
   //console.log(event.data);
