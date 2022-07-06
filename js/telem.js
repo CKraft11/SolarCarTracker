@@ -4,8 +4,6 @@ channelNum = new Uint32Array([2]);
 
 socket.onopen = () => {
   socket.send(channelNum);
-  document.getElementById("connection").style.display = "flex";
-  document.getElementById("disconnection").style.display = "none";
 };
 
 socket.onmessage = function (event) {
@@ -23,6 +21,8 @@ socket.onmessage = function (event) {
     global = telemLong;
     console.log("Latitude: " + telemLat + " Longitude: " + telemLong);
     carMarker.setLatLng([telemLat,telemLong]);
+    document.getElementById("connection").style.display = "flex";
+    document.getElementById("disconnection").style.display = "none";
   }
   //console.log(event.data);
   }
