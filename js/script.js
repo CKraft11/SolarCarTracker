@@ -45,7 +45,7 @@ fetch("asc.json")
 	  
 		layer.setStyle({dashArray:"10 10", 
 						dashOffset:0,
-						color:"#88120d"});
+						color:"#0278fc"});
 	  
 		tracks.push(layer); //add to tracks list
 	}
