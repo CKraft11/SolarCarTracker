@@ -68,3 +68,10 @@ box-sizing:unset;
   font-weight: 700;
   background-color: #fff;
 }
+#styleButton {
+  position: absolute;
+  top: 104px;
+  left: 60px;
+  padding: 10px;
+  z-index: 400;
+}

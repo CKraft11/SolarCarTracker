@@ -5,13 +5,37 @@
 
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
+realTerrain = 0;
+function terrainChange(realTerrain) {
+  if (realTerrain%2==1) {
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        }).addTo(map);
+  } else {
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
+  }
+}
+// THIS CODE DEVOLVES INTO LAG AND NEEDS MAJOR OPTIMIZATION
+
+
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
+var button = document.getElementById('styleButton');
+button.addEventListener('click', () => realTerrain = realTerrain+1);
+button.addEventListener('click', () => terrainChange(realTerrain));
+
+
+  
+
+  
+
+  
 
 //finishline
 L.marker([42.5839, -114.4710], {icon: finishIcon}).addTo(map);
