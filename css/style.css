@@ -31,8 +31,8 @@ body {
   font-weight: 700;
 font-size: 1.5em;
 color: var(--bright1);
-margin: 0 .5em 0 0;
-padding: .5em;
+margin: 0 0.2em 0 0;
+padding: .2em;
 cursor: pointer;
 flex-flow: row nowrap;
 align-items: center;
@@ -42,6 +42,7 @@ box-sizing:unset;
 }
 .navbar {
   padding: 5px 15px;
+  padding-left: 0.2em;
   height: 2.5em;
   background-color:#7B2428;
   z-index: 100;
