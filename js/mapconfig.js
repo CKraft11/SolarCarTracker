@@ -8,7 +8,7 @@ var config = {
 };
 
 // magnification with which the map will start
-const zoom = 6;
+const zoom = 16;
 // co-ordinates
 const lat = solarLat;
 const lng = solarLong;
