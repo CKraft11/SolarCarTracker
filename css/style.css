@@ -42,7 +42,7 @@ box-sizing:unset;
 }
 .navbar {
   padding: 5px 15px;
-  height: 3em;
+  height: 2.5em;
   background-color:#7B2428;
   z-index: 100;
   display: flex;
@@ -91,7 +91,8 @@ box-sizing:unset;
   flex-flow: column nowrap;
   align-items: flex-end;
   justify-content: center;
-  padding: 10px;
+  padding: 8px;
+  margin-right:-5px;
   border-radius: 10px;
   background-color: #222;
   cursor: pointer;
@@ -104,7 +105,8 @@ box-sizing:unset;
   flex-flow: column nowrap;
   align-items: flex-end;
   justify-content: center;
-  padding: 10px;
+  padding: 8px;
+  margin-right:-5px;
   border-radius: 10px;
   background-color: #222;
   cursor: pointer;
