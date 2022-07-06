@@ -38,8 +38,8 @@ fetch("asc.json")
   });
   
  function onEachFeature(feature, layer) {
-	layer.bindPopup(feature.properties.nazwa);
-	console.log(feature);
+	//layer.bindPopup(feature.properties.nazwa);
+	//console.log(feature);
 	  
 	if(feature.geometry.type == "LineString"){  
 	  
@@ -50,7 +50,9 @@ fetch("asc.json")
 		tracks.push(layer); //add to tracks list
 	}
 	if(feature.geometry.type == "Point"){
-	
+		
+		//console.log(feature);
+		layer.bindTooltip(feature.properties.name,{direction:"top"});
 	}	
 }
 
