@@ -85,3 +85,27 @@ box-sizing:unset;
   font-family : inherit;
   
 }
+#connection {
+  font-size: .9em;
+  display: none;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #000;
+  cursor: pointer;
+  color:#00ff00
+}
+#disconnection {
+  font-size: .9em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #000;
+  cursor: pointer;
+  color:#ff0000
+}

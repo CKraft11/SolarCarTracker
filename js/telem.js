@@ -4,6 +4,8 @@ channelNum = new Uint32Array([2]);
 
 socket.onopen = () => {
   socket.send(channelNum);
+  document.getElementById("connection").style.display = "flex";
+  document.getElementById("disconnection").style.display = "none";
 };
 
 socket.onmessage = function (event) {
@@ -24,3 +26,8 @@ socket.onmessage = function (event) {
   }
   //console.log(event.data);
   }
+
+socket.onclose = () => {
+  document.getElementById("connection").style.display = "none";
+  document.getElementById("disconnection").style.display = "flex";
+};
