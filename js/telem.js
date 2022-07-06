@@ -2,11 +2,6 @@ var socket = new WebSocket("ws://telem.ctrtl.com/ws");
 
 channelNum = 2;
 
-// socket.onopen = () => {
-//   alert("[open] Connection established");
-//   alert("Sending to server");
-//   socket.send(channelNum);
-// };
 function setDataSource<T>(key: number, struct: StructBuilder<string, T>, target: T, cb?: () => void) {
   handlers[key] = { key, struct, target, cb }
   if (socket.readyState == socket.OPEN) socket.send(new Uint32Array([key]))
