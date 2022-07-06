@@ -3,6 +3,9 @@
  * geoJSON simple
  */
 
+ var solarLat = 38.927330017089844;
+ var solarLong = -95.67621612548828;
+
 // config map
 let config = {
   minZoom: 2,
@@ -11,8 +14,8 @@ let config = {
 // magnification with which the map will start
 const zoom = 6;
 // co-ordinates
-const lat = 40;
-const lng = -105;
+const lat = solarLat;
+const lng = solarLong;
 
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
@@ -42,8 +45,7 @@ var p15Icon = L.icon({
   iconAnchor:   [48, 12], // point of the icon which will correspond to marker's location
 });
 
-var solarLat = 38.927330017089844;
-var solarLong = -95.67621612548828;
+
 L.marker([42.5839, -114.4710], {icon: finishIcon}).addTo(map);
 //var finishline = new L.Marker([42.5839, -114.4710]);
 L.marker([solarLat, solarLong], {icon: p15Icon}).addTo(map);
