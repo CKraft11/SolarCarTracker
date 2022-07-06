@@ -1,6 +1,6 @@
 var socket = new WebSocket("ws://telem.ctrtl.com/ws");
 
-channelNum = new Uint32Array([2]);
+channelNum = 2;
 
 // socket.onopen = () => {
 //   alert("[open] Connection established");
