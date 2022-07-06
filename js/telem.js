@@ -28,7 +28,7 @@ socket.onmessage = function (event) {
   if (webData.byteLength == 96) {
     speed = new Int32Array(webData.slice(0, 96));
     speed = speed[1]/10;
-    console.log(speed);
+    //console.log(speed);
     const div = document.getElementById('speed');
     div.innerHTML = speed + " Mph";
 
