@@ -117,7 +117,7 @@ box-sizing:unset;
 #speed {
   font-size: .9em;
   display: flex;
-  flex-flow: column nowrap;
+  white-space: nowrap;
   align-items: flex-end;
   justify-content: center;
   padding: 8px;
