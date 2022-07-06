@@ -2,7 +2,7 @@ var socket = new WebSocket("ws://telem.ctrtl.com/ws");
 
 channelNum = 2;
 
-function setDataSource<T>(key: number, struct: StructBuilder<string, T>, target: T, cb?: () => void) {
+function setDataSource<T>(key, struct, target, cb) {
   handlers[key] = { key, struct, target, cb }
   if (socket.readyState == socket.OPEN) socket.send(new Uint32Array([key]))
 }

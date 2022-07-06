@@ -52,7 +52,8 @@ fetch("asc.json")
 	if(feature.geometry.type == "Point"){
 		
 		//console.log(feature);
-		layer.bindTooltip(feature.properties.name,{direction:"top"});
+    //layer.bindTooltip(feature.properties.name,{direction:"top"});
+		layer.bindTooltip(feature.properties.name,{sticky:true});
 	}	
 }
 
