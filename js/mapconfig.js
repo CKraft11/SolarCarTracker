@@ -1,3 +1,6 @@
+var solarLat = 38.927330017089844;
+var solarLong = -95.67621612548828;
+
 // config map
 var config = {
   minZoom: 2,
