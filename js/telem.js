@@ -18,8 +18,6 @@ socket.onmessage = function (event) {
     var location = new Float32Array (webData)
     var telemLat = location[2];
     var telemLong = location[3];
-    global = telemLat;
-    global = telemLong;
     //console.log("Latitude: " + telemLat + " Longitude: " + telemLong);
     carMarker.setLatLng([telemLat,telemLong]);
     document.getElementById("connection").style.display = "flex";
