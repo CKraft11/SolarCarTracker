@@ -113,3 +113,17 @@ box-sizing:unset;
   color:#ff0000;
   opacity:0.9;
 }
+#speed {
+  font-size: .9em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 10px;
+  background-color: #222;
+  cursor: pointer;
+  color:#fff;
+  opacity:0.9;
+}
