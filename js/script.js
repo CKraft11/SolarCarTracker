@@ -3,19 +3,8 @@
  * geoJSON simple
  */
 
- var solarLat = 38.927330017089844;
- var solarLong = -95.67621612548828;
-
-// config map
-let config = {
-  minZoom: 2,
-  maxZoom: 18,
-};
-// magnification with which the map will start
-const zoom = 6;
-// co-ordinates
-const lat = solarLat;
-const lng = solarLong;
+var solarLat = 38.927330017089844;
+var solarLong = -95.67621612548828;
 
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
@@ -30,23 +19,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 function onEachFeature(feature, layer) {
   layer.bindPopup(feature.properties.nazwa);
 }
-var solarDetails = {
-  title: "PrISUm Solar Car",
-  clickable: true
-}
-var finishIcon = L.icon({
-  iconUrl: '/images/finish_line.png',
-  iconSize:     [64, 64], // size of the icon
-  iconAnchor:   [22, 64], // point of the icon which will correspond to marker's location
-});
-var p15Icon = L.icon({
-  iconUrl: '/images/p15.png',
-  iconSize:     [96, 24], // size of the icon
-  iconAnchor:   [48, 12], // point of the icon which will correspond to marker's location
-});
 
-
-L.marker([42.5839, -114.4710], {icon: finishIcon}).addTo(map);
+L.marker(endLocation, {icon: finishIcon}).addTo(map);
 //var finishline = new L.Marker([42.5839, -114.4710]);
 L.marker([solarLat, solarLong], {icon: p15Icon}).addTo(map);
 //var solarcar = new L.Marker([solarLat, solarLong],solarDetails);
