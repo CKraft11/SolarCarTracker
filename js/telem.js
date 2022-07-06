@@ -1,4 +1,4 @@
-var socket = new WebSocket("ws://telem.ctrtl.com/ws");
+var socket = new WebSocket("wss://telem.ctrtl.com/ws");
 socket.binaryType = 'arraybuffer';
 channelNum = new Uint32Array([2]);
 
