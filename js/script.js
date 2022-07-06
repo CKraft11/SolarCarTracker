@@ -15,7 +15,7 @@ street.addTo(map);
 var i = 0
 var button = document.getElementById('styleButton');
 button.addEventListener('click', () => i=i+1);
-button.addEventListener('click', () => {if(i%2==0){
+button.addEventListener('click', () => {if(i%2==1){
 	terrain.addTo(map);
 } else {
 	terrain.remove();
