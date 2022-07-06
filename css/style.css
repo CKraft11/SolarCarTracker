@@ -69,6 +69,12 @@ box-sizing:unset;
   font-weight: 700;
   background-color: #fff;
 }
+#map{
+  width: 100%;
+  display:flex;
+  float:left;
+  border-top:10px solid #E5B444;
+}
 #styleButton {
   position: absolute;
   margin-top: 20px;
