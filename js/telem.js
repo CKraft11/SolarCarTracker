@@ -27,9 +27,9 @@ socket.onmessage = function (event) {
     //console.log(time[1]);
     var time = time[1];
     var location = new Float32Array (webData)
-    var lat = location[2];
-    var long = location[3];
-    console.log("Latitude: " + lat + " Longitude: " + long);
+    var telemLat = location[2];
+    var telemLong = location[3];
+    console.log("Latitude: " + telemLat + " Longitude: " + telemLong);
   }
   //console.log(event.data);
   }
