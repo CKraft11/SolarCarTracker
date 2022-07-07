@@ -7,6 +7,8 @@ socket.onopen = () => {
   socket.send(new Uint32Array([3]));
 };
 
+dX=0;
+
 socket.onmessage = function (event) {
   webData=event.data;
   //console.log(webData);
@@ -17,9 +19,19 @@ socket.onmessage = function (event) {
     var time = time[1];
     var location = new Float32Array (webData)
     var telemLat = location[2];
+    
     var telemLong = location[3];
+    if(telemLong-dX>0){
+      carMarkerF.addTo(map)
+      carMarker.remove()
+    } else {
+      carMarker.addTo(map)
+      carMarkerF.remove()
+    }
+    dX=telemLong;
     //console.log("Latitude: " + telemLat + " Longitude: " + telemLong);
     carMarker.setLatLng([telemLat,telemLong]);
+    carMarkerF.setLatLng([telemLat,telemLong]);
     document.getElementById("connection").style.display = "flex";
     document.getElementById("disconnection").style.display = "none";
   }

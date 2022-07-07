@@ -27,5 +27,10 @@ var p15Icon = L.icon({
   iconSize:     [96, 24], // size of the icon
   iconAnchor:   [48, 12], // point of the icon which will correspond to marker's location
 });
+var p15fIcon = L.icon({
+  iconUrl: '/images/p15f.png',
+  iconSize:     [96, 24], // size of the icon
+  iconAnchor:   [48, 12], // point of the icon which will correspond to marker's location
+});
 
 var endLocation = [42.5839, -114.4710];

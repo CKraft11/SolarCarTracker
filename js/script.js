@@ -27,7 +27,8 @@ console.log(terrain)
 L.marker([42.5839, -114.4710], {icon: finishIcon}).addTo(map);
 
 //carmarker
-var carMarker = L.marker([solarLat, solarLong], {icon: p15Icon}).addTo(map);
+var carMarker = L.marker([solarLat, solarLong], {icon: p15Icon});
+var carMarkerF = L.marker([solarLat, solarLong], {icon: p15fIcon});
 
 var tracks = [];
 
