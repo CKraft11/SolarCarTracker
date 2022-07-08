@@ -18,9 +18,11 @@ socket.onmessage = function (event) {
     //console.log(time[1]);
     var time = time[1];
     var location = new Float32Array (webData)
-    var telemLat = location[2];
+    if(location[2]||location[3]>0){
+      var telemLat = location[2];
+      var telemLong = location[3];
+    }
     
-    var telemLong = location[3];
     if(telemLong-dX>0){
       carMarkerF.addTo(map)
       carMarker.remove()
