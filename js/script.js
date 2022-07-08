@@ -8,7 +8,7 @@
 const map = L.map("map", config).fitBounds([[38.823480, -94.240652],[43.921331, -115.489527]]);
 let mapUrl = ["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png","https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"]
 
-var street = L.tileLayer(mapUrl[0]);
+var street = L.tileLayer(mapUrl[0],{attribution: '© OpenStreetMap'});
 var terrain = L.tileLayer(mapUrl[1]);
 street.addTo(map);
 
