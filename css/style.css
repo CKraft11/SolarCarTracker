@@ -26,6 +26,8 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f1f1f1;
+  display: flex;
+  flex-flow: column;
 }
 .logo{
   font-weight: 700;
@@ -79,7 +81,7 @@ box-sizing:unset;
   border-top:10px solid #E5B444;
 }
 #styleButton {
-  position: absolute;
+  position: relative;
   margin-top: 20px;
   left: 50px;
   padding: 10px;
