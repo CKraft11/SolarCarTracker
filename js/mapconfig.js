@@ -1,5 +1,5 @@
-var solarLat = 38.923630017089844;
-var solarLong = -95.67321612548828;
+var solarLat = 42.0274;
+var solarLong = -93.6515;
 
 // config map
 var config = {
