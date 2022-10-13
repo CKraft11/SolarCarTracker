@@ -1,3 +1,4 @@
+carMarker.addTo(map)
 var socket = new WebSocket("wss://telem.ctrtl.com/ws");
 socket.binaryType = 'arraybuffer';
 channelNum = new Uint32Array([2]);
@@ -8,7 +9,6 @@ socket.onopen = () => {
 };
 
 dX=0;
-carMarker.addTo(map)
 socket.onmessage = function (event) {
   webData=event.data;
   //console.log(webData);
