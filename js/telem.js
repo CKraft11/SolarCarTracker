@@ -8,7 +8,7 @@ socket.onopen = () => {
 };
 
 dX=0;
-
+carMarker.addTo(map)
 socket.onmessage = function (event) {
   webData=event.data;
   //console.log(webData);
