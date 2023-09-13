@@ -32,7 +32,7 @@ console.log(terrain)
 var carMarker = L.marker([solarLat, solarLong], {icon: p15Icon});
 var carMarkerF = L.marker([solarLat, solarLong], {icon: p15fIcon});
 
-var showRoute = false;
+var showRoute = true;
 
 if(showRoute==true){
 	L.marker([42.5839, -114.4710], {icon: finishIcon}).addTo(map);
